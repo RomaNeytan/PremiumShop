@@ -1,0 +1,2 @@
+# PremiumShop
+Magazine
