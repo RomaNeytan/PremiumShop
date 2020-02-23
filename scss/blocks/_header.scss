@@ -1,0 +1,100 @@
+.header{
+    background: #fff;
+    &-top{
+        height: 85px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__logo{
+            font-size: 49px;
+            color:#3cc3b5;
+            @include Lb();
+        }
+        &__search{
+            position: relative;
+            width: 100%;
+            max-width:435px;
+            flex-grow: 1;
+
+            .search{
+                width: 100%;
+                height: 32px;
+                background: transparent;
+                border: 1px solid #e1e1e1;
+                padding: 0 8px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+        }
+        &__iccon{
+            width: 20px;
+            height: 20px;
+            fill:#e3e3e3;
+        }
+        &__img{
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            top:55%;
+            right:5px;
+            z-index: 5;
+            transform: translateY(-50%);
+            background: none;
+            border:0;
+
+            &:focus{
+                outline: none;
+            }
+        }
+        &__cart{
+            display: flex;
+            align-items: center;
+        }
+        &__price{
+            margin-left: 17px;
+            span{
+                font-size: 33px;
+                color:#a1a1a1;
+                @include Bn();
+            }
+        }
+    }
+    // Main
+    &__main{
+        background: #4ccfc1;
+        padding: 12px 0;
+        box-shadow:1px 1px 3px 0 rgba(0,0,0,.8);
+        .container{
+            max-width:1370px;
+        }
+    }
+    &-menu{
+        &__list{
+            display: flex;
+            justify-content: flex-end;
+        }
+        &__item{
+            display: flex;
+            align-items: center;
+            &:after{
+                content: " ";
+                display: inline-block;
+                width: 1px;
+                height: 22px;
+                background: #fff;
+                margin: 0 20px 0 30px;
+            }
+        }
+        &__link{
+            font-size: 21px;
+            color:$main-color;
+            transition: color 1s linear;
+
+            &:hover{
+                color:#ddf321;
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "vars.scss";
+// container
+@import "grid.scss";
+// mixin
+@import "mixin.scss";
+
+body{ 
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color:$main-color;
+    font-smoothing: antialiased;
+    margin: 0;
+}
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0 0 4px;
+}
+
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// Blocks
+
+@import "blocks/header";
