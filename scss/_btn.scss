@@ -1,0 +1,17 @@
+.main-btn{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 19px;
+    color:$main-color;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    background-color: $product-btn;
+    border-radius: 4px;
+    @include Bn();
+    transition: background .2s linear;
+
+    &:hover{
+        background: #1238dd;
+    }
+}

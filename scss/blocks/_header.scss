@@ -61,13 +61,13 @@
             }
         }
     }
-    // Main
+    // Header-main
     &__main{
         background: #4ccfc1;
         padding: 12px 0;
         box-shadow:1px 1px 3px 0 rgba(0,0,0,.8);
         .container{
-            max-width:1370px;
+            
         }
     }
     &-menu{
@@ -78,18 +78,26 @@
         &__item{
             display: flex;
             align-items: center;
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
             &:after{
                 content: " ";
                 display: inline-block;
-                width: 1px;
+                width: 2px;
                 height: 22px;
                 background: #fff;
-                margin: 0 20px 0 30px;
+                margin: 0 20px 0 21px;
             }
         }
         &__link{
             font-size: 21px;
             color:$main-color;
+            @include Bn();
+            line-height: 19px;
+            text-transform: uppercase;
             transition: color 1s linear;
 
             &:hover{

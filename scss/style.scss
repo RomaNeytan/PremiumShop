@@ -3,6 +3,8 @@
 @import "grid.scss";
 // mixin
 @import "mixin.scss";
+// btn
+@import "btn.scss";
 
 body{ 
     font-size: 15px;
@@ -39,3 +41,5 @@ ul,li{
 // Blocks
 
 @import "blocks/header";
+@import "blocks/intro";
+@import "blocks/categories";

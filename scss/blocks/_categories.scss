@@ -1,0 +1,41 @@
+.categories{
+    background: #fff;
+    &__inner{
+
+    }
+    &__slider{
+        display: flex;
+    }
+    &-item{
+        display: flex;
+        align-items: center;
+        height: 200px;
+        &:after{
+            content: " ";
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: #e7e7e7;
+            margin: 0 25px 0 50px;
+        }
+        &:last-child{
+            &:after{
+                display: none;
+            }
+        }
+        &-content{
+            margin-left: 50px;
+            &_sm{
+                margin-left: 20px;
+            }
+            &__title{
+                font-size: 27px;
+                color:#afafaf;
+                line-height: 25px;
+                text-transform: uppercase;
+                @include Bn();
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
