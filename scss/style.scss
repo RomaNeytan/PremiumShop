@@ -10,7 +10,7 @@ body{
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
     color:$main-color;
-    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
     margin: 0;
 }
 
@@ -23,6 +23,7 @@ body{
 h1,h2,h3,h4,h5,h6{
     margin: 0;
 }
+
 
 a{
     text-decoration: none;
@@ -37,6 +38,19 @@ ul,li{
     padding: 0;
     list-style: none;
 }
+
+.main-wrapper{
+    min-height: 100%;
+    overflow: hidden;
+}
+
+// Burger
+
+@import "burger.scss";
+
+// Slick
+
+@import "slick.scss";
 
 // Blocks
 

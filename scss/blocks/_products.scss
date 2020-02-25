@@ -14,6 +14,10 @@
             text-transform: uppercase;
             @include Bn();
             font-weight: normal;
+
+            @media (max-width:$screen-sm-max){
+                font-size: 27px;
+            }
         }
     }
     &__inner{
@@ -26,6 +30,16 @@
         flex:0 1 33.33333%;
         padding: 0 15px;
         margin-bottom: 35px;
+
+        @media (max-width:$screen-sm-max){
+            flex:0 1 50%;
+        }
+
+        @media (max-width:$screen-xs-max){
+            flex:0 1 100%;
+            max-width:300px;
+            margin: 0 auto 25px auto;
+        }
     }
 }
 
@@ -35,7 +49,11 @@
     box-shadow: 0 0 3px rgba(0,0,0,.16);
     height: 100%;
     padding: 25px 0;
-    margin-left: 25px;
+
+    @media (min-width:$screen-md){
+        margin-left: 25px;
+    }
+
     &__img{
         display: block;
         text-align: center;

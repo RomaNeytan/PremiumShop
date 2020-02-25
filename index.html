@@ -3,11 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "Shop magazine">
+    <meta name = "keywords" content = "Shop,clothe,jeans,jacket">
     <title>Premium</title>
     <!-- Main css -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lobster|Open+Sans&display=swap" rel="stylesheet">
+    <!-- SlickSlider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
 </head>
 <body>
     <!-- Svg -->
@@ -24,292 +36,373 @@
             </g>
         </symbol>
     </svg>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <a href="#" class="header-top__logo">Aditii</a>
-                <div class="header-top__search">
-                    <input type="text" class = "search" name = "search">
-                    <button type="submit" href="#" class="header-top__img">
-                        <svg class = "header-top__iccon">
-                            <use xlink:href = "#loupe"></use>
-                        </svg>
+    <div class="main-wrapper">
+        <!-- Header -->
+        <header class="header" id = "header">
+            <div class="container">
+                <div class="header-top" id = "header-top">
+                    <a href="#" class="header-top__logo">Aditii</a>
+                    <div class="header-top__search">
+                        <input type="text" class = "search" name = "search">
+                        <button type="submit" href="#" class="header-top__img">
+                            <svg class = "header-top__iccon">
+                                <use xlink:href = "#loupe"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="header-top__cart">
+                        <a href="#" class="header-top__basket">
+                            <img src="images/header/header-top/shop.png" alt="Shop">
+                        </a>
+                        <div class="header-top__price">
+                            <span>$300</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header-nav -->
+            <div class="header__main" id = "header-main">
+                <div class="container">
+                    <nav class="header-menu" id = "header-menu">
+                        <ul class="header-menu__list">
+                            <li class="header-menu__item" data-scroll = "#header"><a href="#" class="header-menu__link">Home</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Sale</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Handbags</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Wallets</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Accessories</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Mens Store</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Shoes</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Vintage</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Services</a></li>
+                            <li class="header-menu__item" data-scroll = "#products"><a href="#" class="header-menu__link">Contact us</a></li>
+                        </ul>
+                    </nav>
+                    <!-- Nav toggle -->
+                    <button class="nav-toggle" id = "nav-toggle">
+                        <span class="nav-toggle__item">Burger</span>
                     </button>
                 </div>
-                <div class="header-top__cart">
-                    <a href="#" class="header-top__basket">
-                        <img src="images/header/header-top/shop.png" alt="Shop">
-                    </a>
-                    <div class="header-top__price">
-                        <span>$300</span>
-                    </div>
-                </div>
             </div>
-        </div>
-        <!-- Header-nav -->
-        <div class="header__main">
-            <div class="container">
-                <nav class="header-menu">
-                    <ul class="header-menu__list">
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Home</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Sale</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Handbags</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Wallets</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Accessories</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Mens Store</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Shoes</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Vintage</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Services</a></li>
-                        <li class="header-menu__item"><a href="#" class="header-menu__link">Contact us</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-    <!-- Main -->
-    <main>
-        <!-- Bunner -->
-        <section class="intro">
-            <div class="container"></div>
-                <div class="intro__slider">
-                    <div class="intro__item intro-item">
-                        <div class="intro-item__img">
-                            <a href="#"><img src="images/intro/1.png" alt="Levis"></a>
-                        </div>
-                        <div class="intro-item-content">
-                            <h1 class="intro-item-content__title">Cowhide <br> Standard Crew</h1>
-                            <div class="intro-item-content__description">
-                                <p>White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit. </p>
-                            </div>
-                            <div class="intro-item-content__btn">
-                                <a href = "#" class="btn">Shop now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Categories -->
-        <section class="categories">
-            <div class="container">
-                <div class="categories__inner">
-                    <div class="categories__slider">
-                        <div class="categories__item categories-item">
-                            <div class="categories-item__img">
-                                <a href="#"><img src="images/categories/1.png" alt="Shoes"></a>
-                            </div>
-                            <div class="categories-item-content categories-item-content_sm">
-                                <h4 class="categories-item-content__title">bRANDED sHOES</h4>
-                                <div class="categories-item-content__btn">
-                                    <a href="#" target="_blank" class="main-btn">Shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 2 -->
-                        <div class="categories__item categories-item">
-                            <div class="categories-item__img">
-                                <a href="#"><img src="images/categories/2.png" alt="Tshirts"></a>
-                            </div>
-                            <div class="categories-item-content">
-                                <h4 class="categories-item-content__title">bRANDED tSHIRTS</h4>
-                                <div class="categories-item-content__btn">
-                                    <a href="#" target="_blank" class="main-btn">Shop</a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 3 -->
-                        <div class="categories__item categories-item">
-                            <div class="categories-item__img">
-                                <a href="#"><img src="images/categories/3.png" alt="Shoes"></a>
-                            </div>
-                            <div class="categories-item-content">
-                                <h4 class="categories-item-content__title">bRANDED sHOES</h4>
-                                <div class="categories-item-content__btn">
-                                    <a href="#" target="_blank" class="main-btn">Shop</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div> <!-- /slider -->
-                </div>
-            </div>
-        </section>
-        <!-- Products -->
-        <section class="products">
-                <div class="products-header">
-                    <div class="container">
-                        <h4 class="products-header__title">Featured products</h4>
-                    </div>
-                </div>
-                <!-- Main -->
+        </header>
+        <!-- Main -->
+        <main>
+            <!-- Bunner -->
+            <section class="intro">
                 <div class="container">
-                    <div class="products__inner">
-                        <div class="products__column">
-                            <div class="products__item item-products">
-                                <div class="item-products__img"><a href="#"><img src="images/products/1.png" alt="Shoe"></a></div>
-                                <h5 class="item-products__title">Branded shoe</h5>
-                                <div class="item-products__footer">
-                                    <div class="item-products__price">$300</div>
-                                    <div class="item-products__button">
-                                        <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                    <div class="intro__slider">
+                        <div>
+                            <div class="intro__item intro-item">
+                                <div class="intro-item__img">
+                                    <a href="#"><img src="images/intro/1.png" alt="Levis"></a>
+                                </div>
+                                <div class="intro-item-content">
+                                    <h1 class="intro-item-content__title">Cowhide <br> Standard Crew</h1>
+                                    <div class="intro-item-content__description">
+                                        <p>White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit. </p>
+                                    </div>
+                                    <div class="intro-item-content__btn">
+                                        <a href = "#" class="btn">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- 2 -->
-                        <div class="products__column">
-                            <div class="products__item item-products">
-                                <div class="item-products__img"><a href="#"><img src="images/products/2.png" alt="Tees"></a></div>
-                                <h5 class="item-products__title">Branded tees</h5>
-                                <div class="item-products__footer">
-                                    <div class="item-products__price">$300</div>
-                                    <div class="item-products__button">
-                                        <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                        <div>
+                            <div class="intro__item intro-item">
+                                <div class="intro-item__img">
+                                    <a href="#"><img src="images/intro/2.png" alt="Levis"></a>
+                                </div>
+                                <div class="intro-item-content">
+                                    <h1 class="intro-item-content__title">Clock <br> Standard Crew</h1>
+                                    <div class="intro-item-content__description">
+                                        <p>
+                                            A watch is the only accessory that every man should have. It is difficult to select them due to the large number of parameters and options, but at the same time it is simple if you know your style and know what you want. </p>
+                                    </div>
+                                    <div class="intro-item-content__btn">
+                                        <a href = "#" class="btn">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- 3 -->
-                        <div class="products__column">
-                            <div class="products__item item-products">
-                                <div class="item-products__img"><a href="#"><img src="images/products/3.png" alt="Shoe"></a></div>
-                                <h5 class="item-products__title">Branded shoe</h5>
-                                <div class="item-products__footer">
-                                    <div class="item-products__price">$300</div>
-                                    <div class="item-products__button">
-                                        <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                        <div>
+                            <div class="intro__item intro-item">
+                                <div class="intro-item__img">
+                                    <a href="#"><img src="images/intro/3.png" alt="Levis"></a>
+                                </div>
+                                <div class="intro-item-content">
+                                    <h1 class="intro-item-content__title">Jacket <br> Standard Crew</h1>
+                                    <div class="intro-item-content__description">
+                                        <p>Modern jackets are made of water-repellent fabrics (leather, denim), as well as fur and faux fur. Often jackets are sewn with a warm lining. Sometimes jackets are equipped with a zipper and a hood. </p>
+                                    </div>
+                                    <div class="intro-item-content__btn">
+                                        <a href = "#" class="btn">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- 4 -->
-                        <div class="products__column">
-                            <div class="products__item item-products">
-                                <div class="item-products__img"><a href="#"><img src="images/products/4.png" alt="Shoe"></a></div>
-                                <h5 class="item-products__title">Branded shoe</h5>
-                                <div class="item-products__footer">
-                                    <div class="item-products__price">$300</div>
-                                    <div class="item-products__button">
-                                        <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                        <div>
+                            <div class="intro__item intro-item">
+                                <div class="intro-item__img">
+                                    <a href="#"><img src="images/intro/1.png" alt="Levis"></a>
+                                </div>
+                                <div class="intro-item-content">
+                                    <h1 class="intro-item-content__title">Cowhide <br> Standard Crew</h1>
+                                    <div class="intro-item-content__description">
+                                        <p>White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit. </p>
+                                    </div>
+                                    <div class="intro-item-content__btn">
+                                        <a href = "#" class="btn">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <!-- 5 -->
-                        <div class="products__column">
-                            <div class="products__item item-products">
-                                <div class="item-products__img"><a href="#"><img src="images/products/5.png" alt="Shoe"></a></div>
-                                <h5 class="item-products__title">Ems women bag</h5>
-                                <div class="item-products__footer">
-                                    <div class="item-products__price">$300</div>
-                                    <div class="item-products__button">
-                                        <a href="#" target="_blank" class = "main-btn">Buy now</a>
-                                    </div>
+                        <div>
+                            <div class="intro__item intro-item">
+                                <div class="intro-item__img">
+                                    <a href="#"><img src="images/intro/2.png" alt="Levis"></a>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- 6 -->
-                        <div class="products__column">
-                            <div class="products__item item-products">
-                                <div class="item-products__img"><a href="#"><img src="images/products/6.png" alt="Shoe"></a></div>
-                                <h5 class="item-products__title">Branded cargos</h5>
-                                <div class="item-products__footer">
-                                    <div class="item-products__price">$300</div>
-                                    <div class="item-products__button">
-                                        <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                <div class="intro-item-content">
+                                    <h1 class="intro-item-content__title">Cowhide <br> Standard Crew</h1>
+                                    <div class="intro-item-content__description">
+                                        <p>White coloured, short-sleeved, printed T-shirt for men by Levi's. This crew-neck T-shirt is made of organic cotton and comes in a regular fit. </p>
+                                    </div>
+                                    <div class="intro-item-content__btn">
+                                        <a href = "#" class="btn">Shop now</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-        </section>
-    </main>
-     <!-- Footer -->
-     <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-top__row">
-                    <div class="footer-top__column">
-                        <div class="footer-top__item item-footer">
-                            <h5 class="item-footer__title">Featured Sale</h5>
-                            <div class="item-footer__menu">
-                                <ul class="item-footer__list">
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
-                                </ul>
+            </section>
+            <!-- Categories -->
+            <section class="categories">
+                <div class="container">
+                    <div class="categories__inner">
+                        <div class="categories__slider">
+                            <div class="categories__item categories-item">
+                                <div class="categories-item__img">
+                                    <a href="#"><img src="images/categories/1.png" alt="Shoes"></a>
+                                </div>
+                                <div class="categories-item-content categories-item-content_sm">
+                                    <h4 class="categories-item-content__title">bRANDED sHOES</h4>
+                                    <div class="categories-item-content__btn">
+                                        <a href="#" target="_blank" class="main-btn">Shop</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="categories__item categories-item">
+                                <div class="categories-item__img">
+                                    <a href="#"><img src="images/categories/2.png" alt="Tshirts"></a>
+                                </div>
+                                <div class="categories-item-content">
+                                    <h4 class="categories-item-content__title">bRANDED tSHIRTS</h4>
+                                    <div class="categories-item-content__btn">
+                                        <a href="#" target="_blank" class="main-btn">Shop</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="categories__item categories-item">
+                                <div class="categories-item__img">
+                                    <a href="#"><img src="images/categories/3.png" alt="Shoes"></a>
+                                </div>
+                                <div class="categories-item-content">
+                                    <h4 class="categories-item-content__title">bRANDED sHOES</h4>
+                                    <div class="categories-item-content__btn">
+                                        <a href="#" target="_blank" class="main-btn">Shop</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /slider -->
+                    </div>
+                </div>
+            </section>
+            <!-- Products -->
+            <section class="products" id = "products">
+                    <div class="products-header">
+                        <div class="container">
+                            <h4 class="products-header__title">Featured products</h4>
+                        </div>
+                    </div>
+                    <!-- Main -->
+                    <div class="container">
+                        <div class="products__inner">
+                            <div class="products__column">
+                                <div class="products__item item-products">
+                                    <div class="item-products__img"><a href="#"><img src="images/products/1.png" alt="Shoe"></a></div>
+                                    <h5 class="item-products__title">Branded shoe</h5>
+                                    <div class="item-products__footer">
+                                        <div class="item-products__price">$300</div>
+                                        <div class="item-products__button">
+                                            <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 2 -->
+                            <div class="products__column">
+                                <div class="products__item item-products">
+                                    <div class="item-products__img"><a href="#"><img src="images/products/2.png" alt="Tees"></a></div>
+                                    <h5 class="item-products__title">Branded tees</h5>
+                                    <div class="item-products__footer">
+                                        <div class="item-products__price">$300</div>
+                                        <div class="item-products__button">
+                                            <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 3 -->
+                            <div class="products__column">
+                                <div class="products__item item-products">
+                                    <div class="item-products__img"><a href="#"><img src="images/products/3.png" alt="Shoe"></a></div>
+                                    <h5 class="item-products__title">Branded shoe</h5>
+                                    <div class="item-products__footer">
+                                        <div class="item-products__price">$300</div>
+                                        <div class="item-products__button">
+                                            <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 4 -->
+                            <div class="products__column">
+                                <div class="products__item item-products">
+                                    <div class="item-products__img"><a href="#"><img src="images/products/4.png" alt="Shoe"></a></div>
+                                    <h5 class="item-products__title">Branded shoe</h5>
+                                    <div class="item-products__footer">
+                                        <div class="item-products__price">$300</div>
+                                        <div class="item-products__button">
+                                            <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 5 -->
+                            <div class="products__column">
+                                <div class="products__item item-products">
+                                    <div class="item-products__img"><a href="#"><img src="images/products/5.png" alt="Shoe"></a></div>
+                                    <h5 class="item-products__title">Ems women bag</h5>
+                                    <div class="item-products__footer">
+                                        <div class="item-products__price">$300</div>
+                                        <div class="item-products__button">
+                                            <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 6 -->
+                            <div class="products__column">
+                                <div class="products__item item-products">
+                                    <div class="item-products__img"><a href="#"><img src="images/products/6.png" alt="Shoe"></a></div>
+                                    <h5 class="item-products__title">Branded cargos</h5>
+                                    <div class="item-products__footer">
+                                        <div class="item-products__price">$300</div>
+                                        <div class="item-products__button">
+                                            <a href="#" target="_blank" class = "main-btn">Buy now</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- 2 -->
-                    <div class="footer-top__column">
-                        <div class="footer-top__item item-footer">
-                            <h5 class="item-footer__title">Mens Store</h5>
-                            <div class="item-footer__menu">
-                                <ul class="item-footer__list">
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
-                                </ul>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-top">
+                    <div class="footer-top__row">
+                        <div class="footer-top__column">
+                            <div class="footer-top__item item-footer">
+                                <h5 class="item-footer__title">Featured Sale</h5>
+                                <div class="item-footer__menu">
+                                    <ul class="item-footer__list">
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="footer-top__column">
-                        <div class="footer-top__item item-footer">
-                            <h5 class="item-footer__title">Women Store</h5>
-                            <div class="item-footer__menu">
-                                <ul class="item-footer__list">
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
-                                </ul>
+                        <!-- 2 -->
+                        <div class="footer-top__column">
+                            <div class="footer-top__item item-footer">
+                                <h5 class="item-footer__title">Mens Store</h5>
+                                <div class="item-footer__menu">
+                                    <ul class="item-footer__list">
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- 4 -->
-                    <div class="footer-top__column">
-                        <div class="footer-top__item item-footer">
-                            <h5 class="item-footer__title">Quick Links</h5>
-                            <div class="item-footer__menu">
-                                <ul class="item-footer__list">
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
-                                    <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
-                                </ul>
+                        <!-- 3 -->
+                        <div class="footer-top__column">
+                            <div class="footer-top__item item-footer">
+                                <h5 class="item-footer__title">Women Store</h5>
+                                <div class="item-footer__menu">
+                                    <ul class="item-footer__list">
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="footer-top__column">
+                            <div class="footer-top__item item-footer">
+                                <h5 class="item-footer__title">Quick Links</h5>
+                                <div class="item-footer__menu">
+                                    <ul class="item-footer__list">
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Alexis Hudson</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">American Apparel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Ben Sherman</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Big Buddha</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Chanel</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Christian Audigier</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Coach</a></li>
+                                        <li class="item-footer__item"><a href="#" class="item-footer__link">Cole Haan</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-         <!-- Footer bottom -->
-         <div class="footer-bottom">
-            <div class="footer-bottom__copyright">
-                <span> Copyright &copy; 2013 Css Author</span>
+            <!-- Footer bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom__copyright">
+                    <span> Copyright &copy; 2013 Css Author</span>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
+    <!-- Script -->
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src = "js/app.js"></script>
 </body>
 </html>
